@@ -7,7 +7,7 @@ COM_GREETINGS_FOLDER="mods/com.greetings"
 runTree src
 
 echo ""
-echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"	
+echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
 
 echo ""
 echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"
@@ -20,8 +20,7 @@ echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"
 #
 # The compiler creates the 'mods' folder, if it does not exist already and places compiled modules into them.
 
-javac [param to specify path to the module*] mods \
-      -d [path to the compiled module**] \
+javac -d mods/com.greetings/ \
       src/com.greetings/module-info.java \
       src/com.greetings/com/greetings/Main.java
 
@@ -47,4 +46,3 @@ echo "${info} *** Finished compiling modules into the '$COM_GREETINGS_FOLDER' fo
 echo ""
 echo "${info} *** Displaying the contents (compiled modules) of the '$COM_GREETINGS_FOLDER' folder *** ${normal}"
 runTree "$COM_GREETINGS_FOLDER"
-
